@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catalog</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <style>
+      /* Tab Navigation */
+      .tabs {
+        display: flex;
+        border-bottom: 2px solid #e0e0e0;
+        font-family: Arial, sans-serif;
+      }
+      .tab {
+        padding: 10px 20px;
+        cursor: pointer;
+        color: #333;
+      }
+      .tab.active {
+        border-bottom: 3px solid #007bff;
+        color: #007bff;
+        font-weight: bold;
+      }
+
+      /* Catalog Content */
+      .tab-content {
+        padding: 20px;
+        font-family: Arial, sans-serif;
+      }
+      .catalog-item {
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        border: 1px solid #e0e0e0;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        background-color: #f9f9f9;
+      }
+      .catalog-item i {
+        font-size: 24px;
+        color: #007bff;
+        margin-right: 10px;
+      }
+      .file-info {
+        flex: 2;
+        font-size: 16px;
+        color: #007bff;
+      }
+      .file-info a {
+        color: #007bff;
+        text-decoration: none;
+      }
+      .file-date,
+      .file-size {
+        flex: 1;
+        font-size: 14px;
+        color: #666;
+        text-align: center;
+      }
+      .download-icon {
+        flex: 0.5;
+        text-align: right;
+      }
+      .download-icon a {
+        color: #007bff;
+        font-size: 18px;
+        text-decoration: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabs">
+      <div class="tab">Overview</div>
+      <div class="tab active">Catalog</div>
+      <div class="tab">Manual</div>
+      <div class="tab">Certificate</div>
+      <div class="tab">Drawings</div>
+    </div>
+
+    <div id="catalog" class="tab-content">
+      <!-- PDF Item 1 -->
+      <div class="catalog-item">
+        <i class="fa fa-file-pdf"></i>
+        <div class="file-info">
+          <a href="assets/documents/catalog1.pdf" download target="_blank"
+            >NM8N Catalog 2024-EN.pdf</a
+          >
+        </div>
+        <div class="file-date">2024-07-30</div>
+        <div class="file-size">35.18 MB</div>
+        <div class="download-icon">
+          <a href="assets/documents/catalog1.pdf" download target="_blank"
+            ><i class="fa fa-download"></i
+          ></a>
+        </div>
+      </div>
+      <!-- PDF Item 2 -->
+      <div class="catalog-item">
+        <i class="fa fa-file-pdf"></i>
+        <div class="file-info">
+          <a href="assets/documents/catalog2.pdf" download target="_blank"
+            >NM8N Catalog 2024-ES.pdf</a
+          >
+        </div>
+        <div class="file-date">2024-08-15</div>
+        <div class="file-size">22.54 MB</div>
+        <div class="download-icon">
+          <a href="assets/documents/catalog2.pdf" download target="_blank"
+            ><i class="fa fa-download"></i
+          ></a>
+        </div>
+      </div>
+      <!-- PDF Item 3 -->
+      <div class="catalog-item">
+        <i class="fa fa-file-pdf"></i>
+        <div class="file-info">
+          <a href="assets/documents/catalog3.pdf" download target="_blank"
+            >NM8N Catalog 2024-FR.pdf</a
+          >
+        </div>
+        <div class="file-date">2024-09-05</div>
+        <div class="file-size">28.90 MB</div>
+        <div class="download-icon">
+          <a href="assets/documents/catalog3.pdf" download target="_blank"
+            ><i class="fa fa-download"></i
+          ></a>
+        </div>
+      </div>
+      <!-- PDF Item 4 -->
+      <div class="catalog-item">
+        <i class="fa fa-file-pdf"></i>
+        <div class="file-info">
+          <a href="assets/documents/catalog4.pdf" download target="_blank"
+            >NM8N Catalog 2024-DE.pdf</a
+          >
+        </div>
+        <div class="file-date">2024-10-01</div>
+        <div class="file-size">30.40 MB</div>
+        <div class="download-icon">
+          <a href="assets/documents/catalog4.pdf" download target="_blank"
+            ><i class="fa fa-download"></i
+          ></a>
+        </div>
+      </div>
+      <!-- PDF Item 5 -->
+      <div class="catalog-item">
+        <i class="fa fa-file-pdf"></i>
+        <div class="file-info">
+          <a href="assets/documents/catalog5.pdf" download target="_blank"
+            >NM8N Catalog 2024-IT.pdf</a
+          >
+        </div>
+        <div class="file-date">2024-10-20</div>
+        <div class="file-size">33.80 MB</div>
+        <div class="download-icon">
+          <a href="assets/documents/catalog5.pdf" download target="_blank"
+            ><i class="fa fa-download"></i
+          ></a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
