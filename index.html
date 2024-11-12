@@ -87,6 +87,17 @@
     }
   </style>
 
+  <!-- Responsive styling for mobile view -->
+  <style>
+    @media (max-width: 768px) {
+      section > .container > div:last-child {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+
   <body class="template-index index-demo4">
     <!--Page Wrapper-->
     <div class="page-wrapper">
@@ -393,10 +404,7 @@
         <!-- End Service section -->
 
         <!--Shop By Category-->
-        <section
-          class="section collection-slider pt-0"
-          style="margin-top: 40px"
-        >
+        <section style="margin-top: 40px">
           <div class="container">
             <div
               class="section-header style2 d-flex-center justify-content-sm-between"
@@ -412,29 +420,25 @@
               <div
                 class="section-header-right text-start text-sm-end mt-3 mt-sm-0"
               >
-                <!-- Add any additional controls here if needed -->
+                <!-- Additional controls if needed -->
               </div>
             </div>
 
-            <div
-              class="collection-slider-3items slick-arrow-dots gp15 arwOut5 hov-arrow circle-arrow"
-            >
+            <div style="display: flex; gap: 15px; flex-wrap: nowrap">
               <!-- First Image for Mint Power Electric -->
-
-              <div class="category-item zoomscal-hov">
+              <div style="flex: 1; text-align: center">
                 <a href="subcategory.html" class="category-link clr-none">
-                  <div class="">
+                  <div>
                     <img
                       class="blur-up lazyload"
                       data-src="assets/images/logo/Red Box Business Logo (2).jpg"
                       src="assets/images/logo/Red Box Business Logo (2).jpg"
-                      alt="Samrat"
+                      alt="Mint Power Electric"
                       width="416"
                       height="416"
-                      style="height: 280px; width: 400px"
+                      style="height: 280px; width: 400px; max-width: 100%"
                     />
                   </div>
-
                   <div class="details whiteText text-center p-0">
                     <p style="font-weight: bolder; font-size: 20px">
                       Mint Power Electric
@@ -444,21 +448,19 @@
               </div>
 
               <!-- Second Image for Pointex -->
-
-              <div class="category-item zoomscal-hov">
+              <div style="flex: 1; text-align: center">
                 <a href="samrat.html" class="category-link clr-none">
-                  <div class="">
+                  <div>
                     <img
                       class="blur-up lazyload"
                       data-src="assets/images/logo/Red Box Business Logo (1).jpg"
                       src="assets/images/logo/Red Box Business Logo (1).jpg"
-                      alt="Samrat"
+                      alt="Pointex"
                       width="416"
                       height="416"
-                      style="height: 280px; width: 400px"
+                      style="height: 280px; width: 400px; max-width: 100%"
                     />
                   </div>
-
                   <div class="details whiteText text-center p-0">
                     <p style="font-weight: bolder; font-size: 20px">Pointex</p>
                   </div>
@@ -466,9 +468,9 @@
               </div>
 
               <!-- Third Image for Samrat -->
-              <div class="category-item zoomscal-hov">
+              <div style="flex: 1; text-align: center">
                 <a href="samrat.html" class="category-link clr-none">
-                  <div class="">
+                  <div>
                     <img
                       class="blur-up lazyload"
                       data-src="assets/images/logo/Red Box Business Logo.png"
@@ -476,7 +478,7 @@
                       alt="Samrat"
                       width="416"
                       height="416"
-                      style="height: 280px; width: 400px"
+                      style="height: 280px; width: 400px; max-width: 100%"
                     />
                   </div>
                   <div class="details whiteText text-center p-0">
