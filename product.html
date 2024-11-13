@@ -24,6 +24,132 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
+
+  <!-- CSS for styling -->
+  <style>
+    .catalog-download {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+      margin-top: 20px;
+    }
+
+    .file-info {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+      color: #333;
+      flex: 1 1 auto;
+    }
+
+    .pdf-icon {
+      width: 24px;
+      height: 24px;
+      margin-right: 10px;
+    }
+
+    .pdf-name {
+      font-size: 12px;
+    }
+
+    .file-details {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: #666;
+      gap: 10px;
+    }
+
+    .pdf-date,
+    .pdf-size {
+      font-size: 14px;
+    }
+
+    .download-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      /* background-color: #007bff; */
+      color: #fff;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      text-decoration: none;
+    }
+
+    .download-icon {
+      width: 20px;
+      height: 20px;
+    }
+
+    /* Responsive styling */
+    @media (max-width: 768px) {
+      .catalog-download {
+        padding: 10px;
+        flex-direction: row;
+      }
+
+      .pdf-icon {
+        width: 20px;
+        height: 20px;
+      }
+
+      .pdf-name {
+        font-size: 14px;
+      }
+
+      .pdf-date,
+      .pdf-size {
+        font-size: 12px;
+      }
+
+      .download-btn {
+        width: 32px;
+        height: 32px;
+      }
+
+      .download-icon {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .catalog-download {
+        padding: 8px;
+        flex-direction: row;
+      }
+
+      .pdf-icon {
+        width: 18px;
+        height: 18px;
+      }
+
+      .pdf-name {
+        font-size: 13px;
+      }
+
+      .pdf-date,
+      .pdf-size {
+        font-size: 11px;
+      }
+
+      .download-btn {
+        width: 28px;
+        height: 28px;
+      }
+
+      .download-icon {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  </style>
+
   <style>
     .search-container {
       position: relative;
@@ -524,14 +650,14 @@
                           ><i class="icon anm anm-video-r"></i
                         ></span>
                       </a> -->
-                      <a
+                      <!-- <a
                         href="#;"
                         class="btn btn-primary prlightbox"
                         data-bs-toggle="tooltip"
                         data-bs-placement="top"
                         title="Zoom Image"
                         ><i class="icon anm anm-expand-l-arrows"></i
-                      ></a>
+                      ></a> -->
                     </div>
                     <!-- End Product Buttons -->
                   </div>
@@ -665,22 +791,26 @@
               >
                 <!-- Product Details -->
                 <div class="product-single-meta">
-                  <h2 class="product-main-title">Product Layout Style1</h2>
+                  <h2 class="product-main-title">
+                    Mint Power Electric: Contactors
+                  </h2>
+
                   <!-- Product Reviews -->
                   <div class="product-review d-flex-center mb-3">
                     <div class="reviewStar d-flex-center">
-                      <i class="icon anm anm-star"></i
-                      ><i class="icon anm anm-star"></i
-                      ><i class="icon anm anm-star"></i
-                      ><i class="icon anm anm-star"></i
-                      ><i class="icon anm anm-star-o"></i
-                      ><span class="caption ms-2">24 Reviews</span>
+                      <i class="icon anm anm-star"></i>
+                      <i class="icon anm anm-star"></i>
+                      <i class="icon anm anm-star"></i>
+                      <i class="icon anm anm-star"></i>
+                      <i class="icon anm anm-star-o"></i>
+                      <span class="caption ms-2">24 Reviews</span>
                     </div>
                     <a class="reviewLink d-flex-center" href="#reviews"
                       >Write a Review</a
                     >
                   </div>
                   <!-- End Product Reviews -->
+
                   <!-- Product Info -->
                   <div class="product-info">
                     <p class="product-stock d-flex">
@@ -693,39 +823,52 @@
                       </span>
                     </p>
                     <p class="product-vendor">
-                      Vendor:<span class="text"><a href="#">HVL</a></span>
+                      Vendor:
+                      <span class="text"
+                        ><a href="#">Mint Power Electric</a></span
+                      >
                     </p>
                     <p class="product-type">
-                      Product Type:<span class="text">Tops</span>
+                      Product Type:
+                      <span class="text">Contactor</span>
                     </p>
                     <p class="product-sku">
-                      SKU:<span class="text">RF104</span>
+                      SKU: <span class="text">C12345</span>
                     </p>
                   </div>
                   <!-- End Product Info -->
+
                   <!-- Product Price -->
                   <div class="product-price d-flex-center my-3">
-                    <span class="price old-price">$135.00</span
-                    ><span class="price">$99.00</span>
+                    <span class="price old-price">₹12,500.00</span>
+                    <span class="price">₹9,999.00</span>
                   </div>
                   <!-- End Product Price -->
+
                   <hr />
+
                   <!-- Sort Description -->
                   <div class="sort-description">
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s.
+                    Mint Power Electric's contactors are ideal for industrial
+                    and residential applications. These products are designed
+                    for durability and high performance, offering reliable
+                    protection and control for electric motors and pumps.
+                    <br /><br />
+                    **Key Features**: - Heavy-duty design for industrial use -
+                    Easy to install and maintain - Compatible with various
+                    voltage levels - Ensures long-term durability and
+                    performance
                   </div>
                   <!-- End Sort Description -->
+
                   <!-- <hr /> -->
+
                   <!-- Countdown -->
                   <!-- <h3 class="text-uppercase mb-0">Hurry up! Sales Ends In</h3>
-                  <div
-                    class="product-countdown d-flex-center text-center my-3"
-                    data-countdown="2028/12/12"
-                  ></div> -->
+  <div class="product-countdown d-flex-center text-center my-3" data-countdown="2028/12/12"></div> -->
                   <!-- End Countdown -->
                 </div>
+
                 <!-- End Product Details -->
 
                 <!-- Product Form -->
@@ -988,7 +1131,7 @@
                       class="money"
                       data-currency-usd="$199.00"
                       data-currency="USD"
-                      >$199.00</span
+                      >INR999.00</span
                     ></b
                   >
                   More for Free shipping
@@ -1078,56 +1221,66 @@
               class="product-tabs style2 list-unstyled d-flex-wrap d-flex-justify-center d-none d-md-flex"
             >
               <li rel="description" class="active">
-                <a class="tablink">Description</a>
+                <a class="tablink">Overview</a>
               </li>
               <li rel="additionalInformation">
-                <a class="tablink">Additional Information</a>
+                <a class="tablink">Catalog</a>
               </li>
-              <li rel="size-chart"><a class="tablink">Size Chart</a></li>
-              <li rel="shipping-return">
-                <a class="tablink">Shipping &amp; Return</a>
+              <li rel="size-chart">
+                <a class="tablink">Certificate</a>
               </li>
-              <li rel="reviews"><a class="tablink">Reviews</a></li>
+              <li rel="reviews">
+                <a class="tablink">Drawings</a>
+              </li>
             </ul>
 
             <div class="tab-container">
-              <!--Description-->
+              <!--Overview-->
               <h3 class="tabs-ac-style d-md-none active" rel="description">
-                Description
+                Overview
               </h3>
               <div id="description" class="tab-content">
                 <div class="product-description">
                   <div class="row">
                     <div class="col-12 col-sm-12 col-md-8 col-lg-8">
                       <p>
-                        There are many variations of passages of Lorem Ipsum
-                        available, but the majority have suffered alteration in
-                        some form, by injected humour, or randomised words which
-                        don't look even slightly believable.
+                        The Mint Power Electric product range offers premium
+                        quality and reliability, designed specifically for
+                        contractors in the electrical industry. Whether you're
+                        installing systems, wiring projects, or upgrading power
+                        solutions, Mint Power Electric products are engineered
+                        to meet your needs. With a focus on safety, durability,
+                        and ease of installation, these products are trusted by
+                        professionals for consistent performance.
                       </p>
-                      <h4 class="mb-3">Features</h4>
+                      <h4 class="mb-3">Key Features</h4>
                       <ul class="checkmark-info">
                         <li>
-                          High quality fabric, very comfortable to touch and
-                          wear.
+                          High-performance materials ensuring long-lasting
+                          reliability in demanding environments.
                         </li>
                         <li>
-                          This cardigan sweater is cute for no reason,perfect
-                          for travel and casual.
+                          Easy-to-follow installation instructions, reducing
+                          setup time and improving efficiency.
                         </li>
                         <li>
-                          It can tie in front-is forgiving to you belly or tie
-                          behind.
+                          Versatile and adaptable for a wide range of electrical
+                          applications, from residential to commercial projects.
                         </li>
-                        <li>Light weight and perfect for layering.</li>
+                        <li>
+                          Meets industry standards and regulations for safety
+                          and compliance, ensuring peace of mind for
+                          contractors.
+                        </li>
                       </ul>
                       <p>
-                        The standard chunk of Lorem Ipsum used since the 1500s
-                        is reproduced below for those interested. Sections
-                        1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum"
-                        by Cicero are also reproduced in their exact original
-                        form, accompanied by English versions from the 1914
-                        translation by H. Rackham.
+                        Mint Power Electric has been a trusted name in the
+                        electrical industry for over 20 years. With a commitment
+                        to quality, we provide contractors with the tools and
+                        products they need to get the job done right the first
+                        time. Our products are rigorously tested to meet or
+                        exceed national standards, ensuring top-tier performance
+                        across all applications.
                       </p>
                     </div>
 
@@ -1135,7 +1288,7 @@
                       <img
                         data-src="assets/images/products new/dpc-dp-30ms-ac-341x222.jpg"
                         src="assets/images/products new/dpc-dp-30ms-ac-341x222.jpg"
-                        alt="image"
+                        alt="Mint Power Electric Product"
                         width="600"
                         height="600"
                       />
@@ -1143,566 +1296,362 @@
                   </div>
                 </div>
               </div>
-              <!--End Description-->
+              <!--End Overview-->
 
-              <!--Additional Information-->
+              <!--Catalog Information-->
               <h3 class="tabs-ac-style d-md-none" rel="additionalInformation">
-                Additional Information
+                Catalog
               </h3>
               <div id="additionalInformation" class="tab-content">
                 <div class="product-description">
                   <div class="row">
-                    <div
-                      class="col-12 col-sm-12 col-md-12 col-lg-12 mb-4 mb-md-0"
-                    >
-                      <div class="table-responsive">
-                        <table
-                          class="table table-bordered align-middle table-part mb-0"
-                        >
-                          <tr>
-                            <th>Color</th>
-                            <td>Black, White, Blue, Red, Gray</td>
-                          </tr>
-                          <tr>
-                            <th>Product Dimensions</th>
-                            <td>15 x 15 x 3 cm; 250 Grams</td>
-                          </tr>
-                          <tr>
-                            <th>Date First Available</th>
-                            <td>14 May 2023</td>
-                          </tr>
-                          <tr>
-                            <th>Manufacturer</th>
-                            <td>Fashion and Retail Limited</td>
-                          </tr>
-                          <tr>
-                            <th>Department</th>
-                            <td>Men Shirt</td>
-                          </tr>
-                        </table>
+                    <div class="col-12 mb-4 mb-md-0">
+                      <!-- Responsive PDF Download Section -->
+                      <div class="catalog-download">
+                        <div class="file-info">
+                          <img
+                            src="https://img.icons8.com/ios/452/pdf.png"
+                            alt="PDF Icon"
+                            class="pdf-icon"
+                          />
+                          <span class="pdf-name">NM8N Catalog 2024-EN.pdf</span>
+                        </div>
+                        <div class="file-details">
+                          <span class="pdf-date">2024-07-30</span>
+                          <span class="pdf-size">35.18 MB</span>
+                          <a
+                            href="path/to/NM8N-Catalog-2024-EN.pdf"
+                            download
+                            class="download-btn"
+                          >
+                            <img
+                              src="https://img.icons8.com/ios/452/download.png"
+                              alt="Download Icon"
+                              class="download-icon"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <!-- Responsive PDF Download Section -->
+                      <div class="catalog-download">
+                        <div class="file-info">
+                          <img
+                            src="https://img.icons8.com/ios/452/pdf.png"
+                            alt="PDF Icon"
+                            class="pdf-icon"
+                          />
+                          <span class="pdf-name">NM8N Catalog 2024-EN.pdf</span>
+                        </div>
+                        <div class="file-details">
+                          <span class="pdf-date">2024-07-30</span>
+                          <span class="pdf-size">35.18 MB</span>
+                          <a
+                            href="path/to/NM8N-Catalog-2024-EN.pdf"
+                            download
+                            class="download-btn"
+                          >
+                            <img
+                              src="https://img.icons8.com/ios/452/download.png"
+                              alt="Download Icon"
+                              class="download-icon"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <!-- Responsive PDF Download Section -->
+                      <div class="catalog-download">
+                        <div class="file-info">
+                          <img
+                            src="https://img.icons8.com/ios/452/pdf.png"
+                            alt="PDF Icon"
+                            class="pdf-icon"
+                          />
+                          <span class="pdf-name">NM8N Catalog 2024-EN.pdf</span>
+                        </div>
+                        <div class="file-details">
+                          <span class="pdf-date">2024-07-30</span>
+                          <span class="pdf-size">35.18 MB</span>
+                          <a
+                            href="path/to/NM8N-Catalog-2024-EN.pdf"
+                            download
+                            class="download-btn"
+                          >
+                            <img
+                              src="https://img.icons8.com/ios/452/download.png"
+                              alt="Download Icon"
+                              class="download-icon"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <!-- Responsive PDF Download Section -->
+                      <div class="catalog-download">
+                        <div class="file-info">
+                          <img
+                            src="https://img.icons8.com/ios/452/pdf.png"
+                            alt="PDF Icon"
+                            class="pdf-icon"
+                          />
+                          <span class="pdf-name">NM8N Catalog 2024-EN.pdf</span>
+                        </div>
+                        <div class="file-details">
+                          <span class="pdf-date">2024-07-30</span>
+                          <span class="pdf-size">35.18 MB</span>
+                          <a
+                            href="path/to/NM8N-Catalog-2024-EN.pdf"
+                            download
+                            class="download-btn"
+                          >
+                            <img
+                              src="https://img.icons8.com/ios/452/download.png"
+                              alt="Download Icon"
+                              class="download-icon"
+                            />
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <!--End Additional Information-->
 
-              <!--Size Chart-->
+              <!--End Catalog Information-->
+
+              <!--Certificate Information-->
               <h3 class="tabs-ac-style d-md-none" rel="size-chart">
-                Size Chart
+                Certificate
               </h3>
               <div id="size-chart" class="tab-content">
-                <h4 class="mb-2">Ready to Wear Clothing</h4>
-                <p class="mb-4">
-                  This is a standardised guide to give you an idea of what size
-                  you will need, however some brands may vary from these
-                  conversions.
-                </p>
-                <div class="size-chart-tbl table-responsive px-1">
-                  <table class="table-bordered align-middle mb-0">
-                    <thead>
-                      <tr>
-                        <th>Size</th>
-                        <th>XXS - XS</th>
-                        <th>XS - S</th>
-                        <th>S - M</th>
-                        <th>M - L</th>
-                        <th>L - XL</th>
-                        <th>XL - XXL</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th>UK</th>
-                        <td>6</td>
-                        <td>8</td>
-                        <td>10</td>
-                        <td>12</td>
-                        <td>14</td>
-                        <td>16</td>
-                      </tr>
-                      <tr>
-                        <th>US</th>
-                        <td>2</td>
-                        <td>4</td>
-                        <td>6</td>
-                        <td>8</td>
-                        <td>10</td>
-                        <td>12</td>
-                      </tr>
-                      <tr>
-                        <th>Italy (IT)</th>
-                        <td>38</td>
-                        <td>40</td>
-                        <td>42</td>
-                        <td>44</td>
-                        <td>46</td>
-                        <td>48</td>
-                      </tr>
-                      <tr>
-                        <th>France (FR/EU)</th>
-                        <td>34</td>
-                        <td>36</td>
-                        <td>38</td>
-                        <td>40</td>
-                        <td>42</td>
-                        <td>44</td>
-                      </tr>
-                      <tr>
-                        <th>Denmark</th>
-                        <td>32</td>
-                        <td>34</td>
-                        <td>36</td>
-                        <td>38</td>
-                        <td>40</td>
-                        <td>42</td>
-                      </tr>
-                      <tr>
-                        <th>Russia</th>
-                        <td>40</td>
-                        <td>42</td>
-                        <td>44</td>
-                        <td>46</td>
-                        <td>48</td>
-                        <td>50</td>
-                      </tr>
-                      <tr>
-                        <th>Germany</th>
-                        <td>32</td>
-                        <td>34</td>
-                        <td>36</td>
-                        <td>38</td>
-                        <td>40</td>
-                        <td>42</td>
-                      </tr>
-                      <tr>
-                        <th>Japan</th>
-                        <td>5</td>
-                        <td>7</td>
-                        <td>9</td>
-                        <td>11</td>
-                        <td>13</td>
-                        <td>15</td>
-                      </tr>
-                      <tr>
-                        <th>Australia</th>
-                        <td>6</td>
-                        <td>8</td>
-                        <td>10</td>
-                        <td>12</td>
-                        <td>14</td>
-                        <td>16</td>
-                      </tr>
-                      <tr>
-                        <th>Korea</th>
-                        <td>33</td>
-                        <td>44</td>
-                        <td>55</td>
-                        <td>66</td>
-                        <td>77</td>
-                        <td>88</td>
-                      </tr>
-                      <tr>
-                        <th>China</th>
-                        <td>160/84</td>
-                        <td>165/86</td>
-                        <td>170/88</td>
-                        <td>175/90</td>
-                        <td>180/92</td>
-                        <td>185/94</td>
-                      </tr>
-                      <tr>
-                        <th>Jeans</th>
-                        <td>24-25</td>
-                        <td>26-27</td>
-                        <td>27-28</td>
-                        <td>29-30</td>
-                        <td>31-32</td>
-                        <td>32-33</td>
-                      </tr>
-                    </tbody>
-                  </table>
+                <div class="product-description">
+                  <div class="row">
+                    <div class="col-12 mb-4 mb-md-0">
+                      <!-- Responsive PDF Download Section -->
+                      <div class="catalog-download">
+                        <div class="file-info">
+                          <img
+                            src="https://img.icons8.com/ios/452/pdf.png"
+                            alt="PDF Icon"
+                            class="pdf-icon"
+                          />
+                          <span class="pdf-name">NM8N Catalog 2024-EN.pdf</span>
+                        </div>
+                        <div class="file-details">
+                          <span class="pdf-date">2024-07-30</span>
+                          <span class="pdf-size">35.18 MB</span>
+                          <a
+                            href="path/to/NM8N-Catalog-2024-EN.pdf"
+                            download
+                            class="download-btn"
+                          >
+                            <img
+                              src="https://img.icons8.com/ios/452/download.png"
+                              alt="Download Icon"
+                              class="download-icon"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <!-- Responsive PDF Download Section -->
+                      <div class="catalog-download">
+                        <div class="file-info">
+                          <img
+                            src="https://img.icons8.com/ios/452/pdf.png"
+                            alt="PDF Icon"
+                            class="pdf-icon"
+                          />
+                          <span class="pdf-name">NM8N Catalog 2024-EN.pdf</span>
+                        </div>
+                        <div class="file-details">
+                          <span class="pdf-date">2024-07-30</span>
+                          <span class="pdf-size">35.18 MB</span>
+                          <a
+                            href="path/to/NM8N-Catalog-2024-EN.pdf"
+                            download
+                            class="download-btn"
+                          >
+                            <img
+                              src="https://img.icons8.com/ios/452/download.png"
+                              alt="Download Icon"
+                              class="download-icon"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <!-- Responsive PDF Download Section -->
+                      <div class="catalog-download">
+                        <div class="file-info">
+                          <img
+                            src="https://img.icons8.com/ios/452/pdf.png"
+                            alt="PDF Icon"
+                            class="pdf-icon"
+                          />
+                          <span class="pdf-name">NM8N Catalog 2024-EN.pdf</span>
+                        </div>
+                        <div class="file-details">
+                          <span class="pdf-date">2024-07-30</span>
+                          <span class="pdf-size">35.18 MB</span>
+                          <a
+                            href="path/to/NM8N-Catalog-2024-EN.pdf"
+                            download
+                            class="download-btn"
+                          >
+                            <img
+                              src="https://img.icons8.com/ios/452/download.png"
+                              alt="Download Icon"
+                              class="download-icon"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                      <!-- Responsive PDF Download Section -->
+                      <div class="catalog-download">
+                        <div class="file-info">
+                          <img
+                            src="https://img.icons8.com/ios/452/pdf.png"
+                            alt="PDF Icon"
+                            class="pdf-icon"
+                          />
+                          <span class="pdf-name">NM8N Catalog 2024-EN.pdf</span>
+                        </div>
+                        <div class="file-details">
+                          <span class="pdf-date">2024-07-30</span>
+                          <span class="pdf-size">35.18 MB</span>
+                          <a
+                            href="path/to/NM8N-Catalog-2024-EN.pdf"
+                            download
+                            class="download-btn"
+                          >
+                            <img
+                              src="https://img.icons8.com/ios/452/download.png"
+                              alt="Download Icon"
+                              class="download-icon"
+                            />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <!--End Size Chart-->
 
-              <!--Shipping &amp; Return-->
-              <h3 class="tabs-ac-style d-md-none" rel="shipping-return">
-                Shipping &amp; Return
-              </h3>
-              <div id="shipping-return" class="tab-content">
-                <h4>Shipping &amp; Return</h4>
-                <ul class="checkmark-info">
-                  <li>Dispatch: Within 24 Hours</li>
-                  <li>1 Year Brand Warranty</li>
-                  <li>
-                    Free shipping across all products on a minimum purchase of
-                    $50.
-                  </li>
-                  <li>International delivery time - 7-10 business days</li>
-                  <li>Cash on delivery might be available</li>
-                  <li>Easy 30 days returns and exchanges</li>
-                </ul>
-                <h4>Free and Easy Returns</h4>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer took a galley of type and scrambled it to make a type
-                  specimen book. It has survived not only five centuries, but
-                  also the leap into electronic typesetting, remaining
-                  essentially unchanged.
-                </p>
-                <h4>Special Financing</h4>
-                <p>
-                  There are many variations of passages of Lorem Ipsum
-                  available, but the majority have suffered alteration in some
-                  form, by injected humour, or randomised words which don't look
-                  even slightly believable. If you are going to use a passage.
-                </p>
-              </div>
-              <!--End Shipping &amp; Return-->
-              <!--Review-->
-              <h3 class="tabs-ac-style d-md-none" rel="reviews">Review</h3>
+              <!--End Certificate Information-->
+
+              <!--Drawings  Information-->
+              <h3 class="tabs-ac-style d-md-none" rel="reviews">Drawings</h3>
               <div id="reviews" class="tab-content">
-                <div class="row">
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-4">
-                    <div class="ratings-main">
-                      <div class="avg-rating d-flex-center mb-3">
-                        <h4 class="avg-mark">5.0</h4>
-                        <div class="avg-content ms-3">
-                          <p class="text-rating">Average Rating</p>
-                          <div class="ratings-full product-review">
-                            <a class="reviewLink d-flex-center" href="#reviews"
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star-o"></i
-                              ><span class="caption ms-2">24 Ratings</span></a
-                            >
-                          </div>
+                <div class="product-description">
+                  <div class="row">
+                    <div class="col-12 mb-4 mb-md-0">
+                      <!-- Responsive PDF Download Section -->
+                      <div class="catalog-download">
+                        <div class="file-info">
+                          <img
+                            src="https://img.icons8.com/ios/452/pdf.png"
+                            alt="PDF Icon"
+                            class="pdf-icon"
+                          />
+                          <span class="pdf-name">NM8N Catalog 2024-EN.pdf</span>
+                        </div>
+                        <div class="file-details">
+                          <span class="pdf-date">2024-07-30</span>
+                          <span class="pdf-size">35.18 MB</span>
+                          <a
+                            href="path/to/NM8N-Catalog-2024-EN.pdf"
+                            download
+                            class="download-btn"
+                          >
+                            <img
+                              src="https://img.icons8.com/ios/452/download.png"
+                              alt="Download Icon"
+                              class="download-icon"
+                            />
+                          </a>
                         </div>
                       </div>
-
-                      <div class="ratings-list">
-                        <div
-                          class="ratings-container d-flex align-items-center mt-1"
-                        >
-                          <div class="ratings-full product-review m-0">
-                            <a
-                              class="reviewLink d-flex align-items-center"
-                              href="#reviews"
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star-o"></i
-                            ></a>
-                          </div>
-                          <div class="progress">
-                            <div
-                              class="progress-bar"
-                              role="progressbar"
-                              aria-valuenow="99"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                              style="width: 99%"
-                            ></div>
-                          </div>
-                          <div class="progress-value">99%</div>
+                      <!-- Responsive PDF Download Section -->
+                      <div class="catalog-download">
+                        <div class="file-info">
+                          <img
+                            src="https://img.icons8.com/ios/452/pdf.png"
+                            alt="PDF Icon"
+                            class="pdf-icon"
+                          />
+                          <span class="pdf-name">NM8N Catalog 2024-EN.pdf</span>
                         </div>
-                        <div
-                          class="ratings-container d-flex align-items-center mt-1"
-                        >
-                          <div class="ratings-full product-review m-0">
-                            <a
-                              class="reviewLink d-flex align-items-center"
-                              href="#reviews"
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star-o"></i
-                            ></a>
-                          </div>
-                          <div class="progress">
-                            <div
-                              class="progress-bar"
-                              role="progressbar"
-                              aria-valuenow="75"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                              style="width: 75%"
-                            ></div>
-                          </div>
-                          <div class="progress-value">75%</div>
+                        <div class="file-details">
+                          <span class="pdf-date">2024-07-30</span>
+                          <span class="pdf-size">35.18 MB</span>
+                          <a
+                            href="path/to/NM8N-Catalog-2024-EN.pdf"
+                            download
+                            class="download-btn"
+                          >
+                            <img
+                              src="https://img.icons8.com/ios/452/download.png"
+                              alt="Download Icon"
+                              class="download-icon"
+                            />
+                          </a>
                         </div>
-                        <div
-                          class="ratings-container d-flex align-items-center mt-1"
-                        >
-                          <div class="ratings-full product-review m-0">
-                            <a
-                              class="reviewLink d-flex align-items-center"
-                              href="#reviews"
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star-o"></i
-                              ><i class="icon anm anm-star-o"></i
-                            ></a>
-                          </div>
-                          <div class="progress">
-                            <div
-                              class="progress-bar"
-                              role="progressbar"
-                              aria-valuenow="50"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                              style="width: 50%"
-                            ></div>
-                          </div>
-                          <div class="progress-value">50%</div>
+                      </div>
+                      <!-- Responsive PDF Download Section -->
+                      <div class="catalog-download">
+                        <div class="file-info">
+                          <img
+                            src="https://img.icons8.com/ios/452/pdf.png"
+                            alt="PDF Icon"
+                            class="pdf-icon"
+                          />
+                          <span class="pdf-name">NM8N Catalog 2024-EN.pdf</span>
                         </div>
-                        <div
-                          class="ratings-container d-flex align-items-center mt-1"
-                        >
-                          <div class="ratings-full product-review m-0">
-                            <a
-                              class="reviewLink d-flex align-items-center"
-                              href="#reviews"
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star-o"></i
-                              ><i class="icon anm anm-star-o"></i
-                              ><i class="icon anm anm-star-o"></i
-                            ></a>
-                          </div>
-                          <div class="progress">
-                            <div
-                              class="progress-bar"
-                              role="progressbar"
-                              aria-valuenow="25"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                              style="width: 25%"
-                            ></div>
-                          </div>
-                          <div class="progress-value">25%</div>
+                        <div class="file-details">
+                          <span class="pdf-date">2024-07-30</span>
+                          <span class="pdf-size">35.18 MB</span>
+                          <a
+                            href="path/to/NM8N-Catalog-2024-EN.pdf"
+                            download
+                            class="download-btn"
+                          >
+                            <img
+                              src="https://img.icons8.com/ios/452/download.png"
+                              alt="Download Icon"
+                              class="download-icon"
+                            />
+                          </a>
                         </div>
-                        <div
-                          class="ratings-container d-flex align-items-center mt-1"
-                        >
-                          <div class="ratings-full product-review m-0">
-                            <a
-                              class="reviewLink d-flex align-items-center"
-                              href="#reviews"
-                              ><i class="icon anm anm-star"></i
-                              ><i class="icon anm anm-star-o"></i
-                              ><i class="icon anm anm-star-o"></i
-                              ><i class="icon anm anm-star-o"></i
-                              ><i class="icon anm anm-star-o"></i
-                            ></a>
-                          </div>
-                          <div class="progress">
-                            <div
-                              class="progress-bar"
-                              role="progressbar"
-                              aria-valuenow="5"
-                              aria-valuemin="0"
-                              aria-valuemax="100"
-                              style="width: 5%"
-                            ></div>
-                          </div>
-                          <div class="progress-value">05%</div>
+                      </div>
+                      <!-- Responsive PDF Download Section -->
+                      <div class="catalog-download">
+                        <div class="file-info">
+                          <img
+                            src="https://img.icons8.com/ios/452/pdf.png"
+                            alt="PDF Icon"
+                            class="pdf-icon"
+                          />
+                          <span class="pdf-name">NM8N Catalog 2024-EN.pdf</span>
+                        </div>
+                        <div class="file-details">
+                          <span class="pdf-date">2024-07-30</span>
+                          <span class="pdf-size">35.18 MB</span>
+                          <a
+                            href="path/to/NM8N-Catalog-2024-EN.pdf"
+                            download
+                            class="download-btn"
+                          >
+                            <img
+                              src="https://img.icons8.com/ios/452/download.png"
+                              alt="Download Icon"
+                              class="download-icon"
+                            />
+                          </a>
                         </div>
                       </div>
                     </div>
-                    <hr />
-                    <div class="spr-reviews">
-                      <h3 class="spr-form-title">Customer Reviews</h3>
-                      <div class="review-inner">
-                        <div class="spr-review d-flex w-100">
-                          <div class="spr-review-profile flex-shrink-0">
-                            <img
-                              class="blur-up lazyload"
-                              data-src="assets/images/users/user-img1.jpg"
-                              src="assets/images/users/user-img1.jpg"
-                              alt=""
-                              width="200"
-                              height="200"
-                            />
-                          </div>
-                          <div class="spr-review-content flex-grow-1">
-                            <div
-                              class="d-flex justify-content-between flex-column mb-2"
-                            >
-                              <div
-                                class="title-review d-flex align-items-center justify-content-between"
-                              >
-                                <h5
-                                  class="spr-review-header-title text-transform-none mb-0"
-                                >
-                                  Eleanor Pena
-                                </h5>
-                                <span class="product-review spr-starratings m-0"
-                                  ><span class="reviewLink"
-                                    ><i class="icon anm anm-star"></i
-                                    ><i class="icon anm anm-star"></i
-                                    ><i class="icon anm anm-star"></i
-                                    ><i class="icon anm anm-star"></i
-                                    ><i class="icon anm anm-star"></i></span
-                                ></span>
-                              </div>
-                            </div>
-                            <b class="head-font">Good and High quality</b>
-                            <p class="spr-review-body">
-                              There are many variations of passages of Lorem
-                              Ipsum available, but the majority have suffered
-                              alteration in some form, by injected humour.
-                            </p>
-                          </div>
-                        </div>
-                        <div class="spr-review d-flex w-100">
-                          <div class="spr-review-profile flex-shrink-0">
-                            <img
-                              class="blur-up lazyload"
-                              data-src="assets/images/users/testimonial1.jpg"
-                              src="assets/images/users/testimonial1.jpg"
-                              alt=""
-                              width="200"
-                              height="200"
-                            />
-                          </div>
-                          <div class="spr-review-content flex-grow-1">
-                            <div
-                              class="d-flex justify-content-between flex-column mb-2"
-                            >
-                              <div
-                                class="title-review d-flex align-items-center justify-content-between"
-                              >
-                                <h5
-                                  class="spr-review-header-title text-transform-none mb-0"
-                                >
-                                  Courtney Henry
-                                </h5>
-                                <span class="product-review spr-starratings m-0"
-                                  ><span class="reviewLink"
-                                    ><i class="icon anm anm-star"></i
-                                    ><i class="icon anm anm-star"></i
-                                    ><i class="icon anm anm-star"></i
-                                    ><i class="icon anm anm-star-o"></i
-                                    ><i class="icon anm anm-star-o"></i></span
-                                ></span>
-                              </div>
-                            </div>
-                            <b class="head-font">Feature Availability</b>
-                            <p class="spr-review-body">
-                              The standard chunk of Lorem Ipsum used since the
-                              1500s is reproduced below for those interested.
-                              Sections 1.10.32 and 1.10.33
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div class="col-12 col-sm-12 col-md-12 col-lg-6 mb-4">
-                    <form
-                      method="post"
-                      action="#"
-                      class="product-review-form new-review-form"
-                    >
-                      <h3 class="spr-form-title">Write a Review</h3>
-                      <p>
-                        Your email address will not be published. Required
-                        fields are marked *
-                      </p>
-                      <fieldset class="row spr-form-contact">
-                        <div class="col-sm-6 spr-form-contact-name form-group">
-                          <label class="spr-form-label" for="nickname"
-                            >Name <span class="required">*</span></label
-                          >
-                          <input
-                            class="spr-form-input spr-form-input-text"
-                            id="nickname"
-                            type="text"
-                            name="name"
-                            required
-                          />
-                        </div>
-                        <div class="col-sm-6 spr-form-contact-email form-group">
-                          <label class="spr-form-label" for="email"
-                            >Email <span class="required">*</span></label
-                          >
-                          <input
-                            class="spr-form-input spr-form-input-email"
-                            id="email"
-                            type="email"
-                            name="email"
-                            required
-                          />
-                        </div>
-                        <div class="col-sm-6 spr-form-review-title form-group">
-                          <label class="spr-form-label" for="review"
-                            >Review Title
-                          </label>
-                          <input
-                            class="spr-form-input spr-form-input-text"
-                            id="review"
-                            type="text"
-                            name="review"
-                          />
-                        </div>
-                        <div class="col-sm-6 spr-form-review-rating form-group">
-                          <label class="spr-form-label">Rating</label>
-                          <div class="product-review pt-1">
-                            <div class="review-rating">
-                              <a href="#;"
-                                ><i class="icon anm anm-star-o"></i></a
-                              ><a href="#;"
-                                ><i class="icon anm anm-star-o"></i></a
-                              ><a href="#;"
-                                ><i class="icon anm anm-star-o"></i></a
-                              ><a href="#;"
-                                ><i class="icon anm anm-star-o"></i></a
-                              ><a href="#;"
-                                ><i class="icon anm anm-star-o"></i
-                              ></a>
-                            </div>
-                          </div>
-                        </div>
-                        <div class="col-12 spr-form-review-body form-group">
-                          <label class="spr-form-label" for="message"
-                            >Body of Review
-                            <span
-                              class="spr-form-review-body-charactersremaining"
-                              >(1500) characters remaining</span
-                            ></label
-                          >
-                          <div class="spr-form-input">
-                            <textarea
-                              class="spr-form-input spr-form-input-textarea"
-                              id="message"
-                              name="message"
-                              rows="3"
-                            ></textarea>
-                          </div>
-                        </div>
-                      </fieldset>
-                      <div class="spr-form-actions clearfix">
-                        <input
-                          type="submit"
-                          class="btn btn-primary spr-button spr-button-primary"
-                          value="Submit Review"
-                        />
-                      </div>
-                    </form>
                   </div>
                 </div>
               </div>
-              <!--End Review-->
+
+              <!--End Catalog Information-->
             </div>
           </div>
           <!--End Product Tabs-->

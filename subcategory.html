@@ -24,6 +24,62 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
+
+  <style>
+    .category-items-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .category-item {
+      width: 380px;
+      height: 270px;
+      /* border: 2px solid red; */
+      text-align: center;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .category-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0; /* Rounded top corners */
+    }
+
+    .category-item-text {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      padding: 10px 0;
+    }
+
+    .category-item:hover {
+      transform: scale(1.05);
+    }
+
+    /* Media query for mobile devices */
+    @media (max-width: 768px) {
+      .category-items-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .category-item {
+        width: 300px;
+        height: auto;
+      }
+    }
+  </style>
   <style>
     .search-container {
       position: relative;
@@ -422,103 +478,79 @@
 
         <!--End Home Slideshow-->
 
-        <!-- Service section -->
-
-        <!-- End Service section -->
-
-        <!--Shop By Category-->
+        <!-- Shop By Category -->
         <section
           class="section collection-slider pt-0"
-          style="margin-top: 40px"
+          style="margin-top: 40px; text-align: center"
         >
           <div class="container">
             <div
-              class="section-header style2 d-flex-center justify-content-sm-between"
+              class="section-header style2 d-flex-center justify-content-center"
+              style="text-align: center"
             >
               <div
-                class="section-header-left text-start"
-                style="font-family: Arial, Helvetica, sans-serif"
+                class="section-header-left"
+                style="
+                  font-family: Arial, Helvetica, sans-serif;
+                  font-weight: bold;
+                  font-size: 24px;
+                "
               >
-                <h2>
-                  Mint Power Electric: Precision Contactors, Starters, &
-                  Submersible pump controllers
-                </h2>
-                <p style="color: #000; font-size: 16px; font-weight: bold">
-                  Discover the unmatched performance of Mint Power Electric’s
-                  premium range of contactors, starters, and Submersible pump
-                  controllers, crafted to deliver reliability and precision
-                  across diverse applications. Empower your systems with our
-                  expertly engineered solutions for seamless control and
-                  efficiency.
-                </p>
-              </div>
-
-              <div
-                class="section-header-right text-start text-sm-end mt-3 mt-sm-0"
-              >
-                <!-- <a href="services.html" class="btn btn-primary">View All Products <i class="icon anm anm-arw-right ms-2"></i></a> -->
+                Mint Power Electric: Contactors, Motor Starters, Submersible
+                Pump Controllers
               </div>
             </div>
 
-            <div
-              class="collection-slider-3items slick-arrow-dots gp15 arwOut5 hov-arrow circle-arrow"
-            >
-              <div class="category-item zoomscal-hov">
+            <!-- Centered Category Items -->
+            <div class="category-items-container">
+              <div class="category-item">
                 <a href="contracts.html" class="category-link clr-none">
-                  <div class="">
-                    <img
-                      class="blur-up lazyload"
-                      data-src="assets/images/logo/Contators main Categry (1).jpg"
-                      src="assets/images/logo/Contators main Categry (1).jpg"
-                      alt="Definite Purpose Contactor"
-                      title=""
-                      width="416"
-                      height="416"
-                      style="border-radius: 10px"
-                    />
-                  </div>
-                  <div class="details whiteText text-center p-0"></div>
+                  <img
+                    class="blur-up lazyload"
+                    data-src="assets/images/products/dpc-1p-30ms-ac-341x222.jpg"
+                    src="assets/images/products/dpc-1p-30ms-ac-341x222.jpg"
+                    alt="mintpowerelectric"
+                    width="416"
+                    height="416"
+                  />
                 </a>
+                <div class="category-item-text">Contactors</div>
               </div>
-              <div class="category-item zoomscal-hov">
+
+              <div class="category-item">
                 <a href="starters.html" class="category-link clr-none">
-                  <div class="">
-                    <img
-                      class="blur-up lazyload"
-                      data-src="assets/images/logo/Straters main categry (1).jpg"
-                      src="assets/images/logo/Straters main categry (1).jpg"
-                      alt="Definite Purpose Contactor"
-                      title=""
-                      width="416"
-                      height="416"
-                      style="border-radius: 10px"
-                    />
-                  </div>
-                  <div class="details whiteText text-center p-0"></div>
+                  <img
+                    class="blur-up lazyload"
+                    data-src="assets/images/products/dpc-single-pole-b-341x222.jpg"
+                    src="assets/images/products/dpc-single-pole-b-341x222.jpg"
+                    alt="Definite Purpose Contactor"
+                    width="416"
+                    height="416"
+                  />
                 </a>
+                <div class="category-item-text">Motor Starters</div>
               </div>
-              <div class="category-item zoomscal-hov">
+
+              <div class="category-item">
                 <a href="submersible.html" class="category-link clr-none">
-                  <div class="">
-                    <img
-                      class="blur-up lazyload"
-                      data-src="assets/images/logo/sumbersebil and pump main category.jpg"
-                      src="assets/images/logo/sumbersebil and pump main category.jpg"
-                      alt="Definite Purpose Contactor"
-                      title=""
-                      width="416"
-                      height="416"
-                      style="border-radius: 10px"
-                    />
-                  </div>
-                  <div class="details whiteText text-center p-0"></div>
+                  <img
+                    class="blur-up lazyload"
+                    data-src="assets/images/products/mch2pb-341x222.jpg"
+                    src="assets/images/products/mch2pb-341x222.jpg"
+                    alt="Submersible Pump Controller"
+                    width="416"
+                    height="416"
+                  />
                 </a>
+                <div class="category-item-text">
+                  Submersible Pump Controllers
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <!--End Shop By Category-->
+        <!-- End Shop By Category -->
 
         <!--Products Slider-->
         <section class="section product-banner-slider">
