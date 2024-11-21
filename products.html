@@ -14,6 +14,17 @@
     <!-- Main Style CSS -->
     <link rel="stylesheet" href="assets/css/style-min.css" />
     <link rel="stylesheet" href="assets/css/responsive.css" />
+
+     <!-- Include FontAwesome for Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
     <style>
       @media (max-width: 768px) {
         .item {
@@ -21,12 +32,131 @@
         }
       }
     </style>
+    
+  <style>
+    .category-items-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .category-item {
+      width: 380px;
+      height: 270px;
+      /* border: 2px solid red; */
+      text-align: center;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .category-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0; /* Rounded top corners */
+    }
+
+    .category-item-text {
+      font-family: Arial, sans-serif;
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      padding: 10px 0;
+    }
+
+    .category-item:hover {
+      transform: scale(1.05);
+    }
+
+    /* Media query for mobile devices */
+    @media (max-width: 768px) {
+      .category-items-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .category-item {
+        width: 300px;
+        height: auto;
+      }
+    }
+  </style>
+  <style>
+    .search-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 10px;
+    }
+
+    .search-container input {
+      width: 100%;
+      padding: 12px 10px 12px 15px;
+      font-size: 16px;
+    }
+
+    .search-container button {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+    }
+
+    .extra-links {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    /* Hide the extra links in mobile view */
+    @media (max-width: 768px) {
+      .extra-links {
+        display: none;
+      }
+
+      /* Full width search input and center search button in mobile view */
+      .search-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .search-container input {
+        width: 80%; /* Increase the width for mobile */
+        padding: 12px 15px;
+      }
+
+      .search-container button {
+        position: relative;
+        width: auto; /* Keep button width auto */
+        padding: 12px;
+        margin-top: 10px;
+        background: #fff; /* Adjust the background as needed */
+        border: 1px solid #ccc; /* Add a border if needed */
+        color: #000; /* Adjust the text color */
+        top: 0; /* Reset top positioning */
+        margin-left: auto;
+        margin-right: auto; /* Centers the button */
+      }
+    }
+  </style>
+
   </head>
 
-  <body class="template-index index-demo4">
+  <body class="shop-page sidebar-filter shop-grid-view-page">
     <!--Page Wrapper-->
     <div class="page-wrapper">
-      <!--Header-->
+       <!--Header-->
       <header class="header d-flex align-items-center header-1 header-fixed">
         <div class="container">
           <div class="row">
@@ -392,110 +522,32 @@
       <!--End Mobile Menu-->
 
       <!-- Body Container -->
-      <div id="page-content" class="mb-0">
-        <!--Home Slideshow-->
-        <section class="slideshow slideshow-wrapper">
-          <div
-            class="home-slideshow slick-arrow-dots rounded-dots circle-arrow"
-          >
-            <div class="slide">
-              <div class="slideshow-wrap">
-                <picture>
-                  <source
-                    media="(max-width:767px)"
-                    srcset="assets/images/istockphoto-1624109411-612x612.jpg"
-                    width="1000"
-                    height="990"
-                  />
-                  <img
-                    class="blur-up lazyload"
-                    src="assets/images/istockphoto-1624109411-612x612.jpg"
-                    alt="slideshow"
-                    title=""
-                    width="1920"
-                    height="990"
-                  />
-                </picture>
-                <div class="container">
-                  <div class="slideshow-content slideshow-overlay middle-right">
-                    <div class="slideshow-content-in">
-                      <div class="wrap-caption animation style1 whiteText">
-                        <!-- <h2 class="ss-mega-title">
-                          Under Favorable <br />Gadgets
-                        </h2>
-                        <p class="ss-sub-title">
-                          The curved display has a curvature level equivalent<br />
-                          to that of a circle tracks the round.
-                        </p>
-                        <div class="ss-btnWrap">
-                          <a class="btn btn-primary" href="shop-grid-view.html"
-                            >Explore Now</a
-                          >
-                        </div> -->
-                      </div>
-                    </div>
-                  </div>
+      <div id="page-content">
+        <!--Page Header-->
+        <div class="page-header text-center">
+          <div class="container">
+            <div class="row">
+              <div
+                class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-between align-items-center"
+              >
+                <div class="page-title"><h1>Our Products</h1></div>
+                <!--Breadcrumbs-->
+                <div class="breadcrumbs">
+                  <a href="index.html" title="Back to the home page">Home</a
+                  >   
                 </div>
-              </div>
-            </div>
-            <div class="slide">
-              <div class="slideshow-wrap">
-                <picture>
-                  <source
-                    media="(max-width:767px)"
-                    srcset="assets/images/istockphoto-1624109411-612x612.jpg"
-                    width="1000"
-                    height="990"
-                  />
-                  <img
-                    class="blur-up lazyload"
-                    src="assets/images/istockphoto-1624109411-612x612.jpg"
-                    alt="slideshow"
-                    title=""
-                    width="1920"
-                    height="990"
-                  />
-                </picture>
-                <div class="container">
-                  <div class="slideshow-content slideshow-overlay middle-left">
-                    <div class="slideshow-content-in">
-                      <div class="wrap-caption animation style1 whiteText">
-                        <h2 class="ss-mega-title">
-                          Premium Electrical <br />and Electronics Services
-                        </h2>
-                        <p class="ss-sub-title">
-                          Upgrade your home with top-quality electronics and
-                          electrical services at
-                          <span class="text-primary fw-bold"
-                            >affordable prices</span
-                          >.
-                        </p>
-                        <div class="ss-btnWrap">
-                          <a class="btn btn-primary" href="shop-grid-view.html"
-                            >Explore Services</a
-                          >
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <!--End Breadcrumbs-->
               </div>
             </div>
           </div>
-        </section>
-        <!--End Home Slideshow-->
-      </div>
-      <!-- End Body Container -->
+        </div>
+        <!--End Page Header-->
 
-      <!-- Product section -->
-      <section
-        data-bs-version="5.1"
-        class="gallery3 cid-tw9mIY3YxI"
-        id="gallery3-d"
-      >
+        <!--Main Content-->
         <div class="container">
-          <div class="mbr-section-head">
-            <h4
+          <!--Category Slider-->
+
+           <h4
               style="
                 text-align: center;
                 font-weight: bold;
@@ -505,617 +557,478 @@
             >
               Products
             </h4>
-            <h5
-              class="mbr-section-subtitle mbr-fonts-style align-center mb-0 mt-2 display-7"
-            >
-              Our products are available in a range of sizes and configurations
-              to accommodate various current and voltage requirements, and are
-              designed with safety and reliability in mind.
-            </h5>
-          </div>
-          <div class="row mt-4">
-            <div
-              class="item features-image сol-12 col-md-6 col-lg-3"
-              style="margin-bottom: 50px"
-            >
-              <div class="item-wrapper">
-                <div class="item-img">
+          <div
+            class="collection-slider-6items gp10 slick-arrow-dots sub-collection section pt-0"
+          >
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
                   <img
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/products/dpc-1p-30ms-ac-341x222.jpg"
                     src="assets/images/products/dpc-1p-30ms-ac-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    data-slide-to="0"
-                    data-bs-slide-to="0"
+                    alt="contractor"
+                    title="contractor"
+                    width="365"
+                    height="365"
                   />
                 </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="item-title">
-                    <strong>1 POLE HVAC CONTACTOR</strong>
-                  </h5>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">20 Items</p>
                 </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/1-2POLEHVACCONTACTOR.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
+              </a>
             </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img">
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
                   <img
-                    src="assets/images/products/dpc-dp-30ms-ac-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    data-slide-to="1"
-                    data-bs-slide-to="1"
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/dpc-1p-30ms-ac-341x222 (1).jpg"
+                    src="assets/images/dpc-1p-30ms-ac-341x222 (1).jpg"
+                    alt="Women's"
+                    title="Women's"
+                    width="365"
+                    height="365"
                   />
                 </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong>2 POLE HVAC CONTACTOR</strong>
-                  </h5>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">24 Items</p>
                 </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/1-2POLEHVACCONTACTOR.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
+              </a>
             </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img">
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
                   <img
-                    src="assets/images/products/dpc-single-pole-s-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    data-slide-to="2"
-                    data-bs-slide-to="2"
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/dpc-single-pole-s-341x222 (1).jpg"
+                    src="assets/images/dpc-single-pole-s-341x222 (1).jpg"
+                    alt="Top"
+                    title="Top"
+                    width="365"
+                    height="365"
                   />
                 </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong>1POLE CONTACTOR</strong>
-                  </h5>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">13 Items</p>
                 </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/1POLE-DP-2POLECONT.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
+              </a>
             </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img">
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
                   <img
-                    src="assets/images/products/dpc-single-pole-b-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="3"
-                    data-bs-slide-to="3"
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/dpc-dp-30ms-ac-341x222 (1).jpg"
+                    src="assets/images/dpc-dp-30ms-ac-341x222 (1).jpg"
+                    alt="Bottom"
+                    title="Bottom"
+                    width="365"
+                    height="365"
                   />
                 </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong>DP-2POLE CONTACTOR</strong>
-                  </h5>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">26 Items</p>
                 </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/1POLE-DP-2POLECONT.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
+              </a>
             </div>
-
-            <div
-              class="item features-image сol-12 col-md-6 col-lg-3"
-              style="margin-bottom: 50px"
-            >
-              <div class="item-wrapper">
-                <div class="item-img">
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
                   <img
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/products/mch2pb-341x222.jpg"
                     src="assets/images/products/mch2pb-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="4"
-                    data-bs-slide-to="4"
+                    alt="T-Shirts"
+                    title="T-Shirts"
+                    width="365"
+                    height="365"
                   />
                 </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong>MCH 2PB-2 POLE CONTACTOR</strong>
-                  </h5>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">18 Items</p>
                 </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/MCH-PowerContactors.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
+              </a>
             </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img">
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
                   <img
-                    src="assets/images/products/mch3h-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="5"
-                    data-bs-slide-to="5"
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/products/dpc-single-pole-b-341x222.jpg"
+                    src="assets/images/products/dpc-single-pole-b-341x222.jpg"
+                    alt="Shirts"
+                    title="Shirts"
+                    width="365"
+                    height="365"
                   />
                 </div>
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong>MCH -3H 4 POLE CONTACTOR</strong>
-                  </h5>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">11 Items</p>
                 </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/MCH-PowerContactors.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
+              </a>
             </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img">
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
                   <img
-                    src="assets/images/products/mch4h-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="6"
-                    data-bs-slide-to="6"
-                  />
-                </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong>MCH -4H 4 POLE CONTACTOR</strong>
-                  </h5>
-                </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/MCH-PowerContactors.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img">
-                  <img
-                    src="assets/images/products/mk-01-dol-1-phase-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="7"
-                    data-bs-slide-to="7"
-                  />
-                </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong>MK-01 DOL 1 PHASE MOTOR STARTER</strong>
-                  </h5>
-                </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/MK1-STARTER.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="item features-image сol-12 col-md-6 col-lg-3"
-              style="margin-bottom: 50px"
-            >
-              <div class="item-wrapper">
-                <div class="item-img">
-                  <img
-                    src="assets/images/products/mk-01-dol-3-phase-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="8"
-                    data-bs-slide-to="8"
-                  />
-                </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong>MK-01 DOL 3 PHASE MOTOR STARTER</strong>
-                  </h5>
-                </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/MK1-STARTER.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="item features-image сol-12 col-md-6 col-lg-3"
-              style="margin-bottom: 50px"
-            >
-              <div class="item-wrapper">
-                <div class="item-img">
-                  <img
-                    src="assets/images/products/mu1-1-phase-motor-starter-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="9"
-                    data-bs-slide-to="9"
-                  />
-                </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong
-                      >MU SERIES 1 PHASE&nbsp; ONLINE MOTOR STARTER</strong
-                    >
-                  </h5>
-                </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/MU2-STARTER.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img">
-                  <img
-                    src="assets/images/products/mu1-3-phase-motor-starter-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="10"
-                    data-bs-slide-to="10"
-                  />
-                </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong>MU SERIES 3 PHASE ONLINE MOTOR STARTER</strong>
-                  </h5>
-                </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/MU2-STARTER.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img">
-                  <img
-                    src="assets/images/products/mug-6-dol-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="11"
-                    data-bs-slide-to="11"
-                  />
-                </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong>MUG-6 SUBMERSIBLE PUMP CONTROLLER</strong>
-                  </h5>
-                </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/MUG6-MUG10PANEL.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img">
-                  <img
-                    src="assets/images/products/mug-10-dol-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="12"
-                    data-bs-slide-to="12"
-                  />
-                </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong>MUG-10 SUBMERSIBLE PUP CONTROLLER</strong>
-                  </h5>
-                </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/MUG6-MUG10PANEL.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="item features-image сol-12 col-md-6 col-lg-3"
-              style="margin-bottom: 50px"
-            >
-              <div class="item-wrapper">
-                <div class="item-img">
-                  <img
-                    src="assets/images/products/mug-20spp-control-unit-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="13"
-                    data-bs-slide-to="13"
-                  />
-                </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong
-                      >MUG-20 SPP AUTOMATIC SUBMERSIBLE PUP CONTROLLER</strong
-                    >
-                  </h5>
-                </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/MUG-SERIESPANEL.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img">
-                  <img
-                    src="assets/images/products/mug-30spp-control-unit-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="14"
-                    data-bs-slide-to="14"
-                  />
-                </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong
-                      >MUG-30 SPP AUTOMATIC SUBMERSIBLE PUP CONTROLLER</strong
-                    >
-                  </h5>
-                </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/MUG-SERIESPANEL.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img">
-                  <img
-                    src="assets/images/products/mug-50spp-control-unit-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="15"
-                    data-bs-slide-to="15"
-                  />
-                </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong
-                      >MUG-50 SPP AUTOMATIC SUBMERSIBLE PUP CONTROLLER</strong
-                    >
-                  </h5>
-                </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/MUG-SERIESPANEL.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img">
-                  <img
-                    src="assets/images/products/mu2-s3-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="16"
-                    data-bs-slide-to="16"
-                  />
-                </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong>MU-S3 4POLE CONTACTOR</strong>
-                  </h5>
-                </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/MU2-S3-CONT.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img">
-                  <img
-                    src="assets/images/products/mu2-s4-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="17"
-                    data-bs-slide-to="17"
-                  />
-                </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong>MU-S4 4POLE CONTACTOR</strong>
-                  </h5>
-                </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/MU2-S3-CONT.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
-            </div>
-            <div
-              class="item features-image сol-12 col-md-6 col-lg-3"
-              style="margin-bottom: 50px"
-            >
-              <div class="item-wrapper">
-                <div class="item-img">
-                  <img
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/products/mu-b3-341x222.jpg"
                     src="assets/images/products/mu-b3-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="18"
-                    data-bs-slide-to="18"
+                    alt="Jeans"
+                    title="Jeans"
+                    width="365"
+                    height="365"
                   />
                 </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong>MU2-B3 4POLE CONTACTOR</strong>
-                  </h5>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">28 Items</p>
                 </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/MU2-B3-CONTACTOR.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
+              </a>
             </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img">
+          </div>
+          <!--End Category Slider-->
+
+          <!--Category Slider-->
+          <div
+            class="collection-slider-6items gp10 slick-arrow-dots sub-collection section pt-0"
+          >
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
                   <img
-                    src="assets/images/products/mu-b4-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="19"
-                    data-bs-slide-to="19"
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/products/dpc-1p-30ms-ac-341x222.jpg"
+                    src="assets/images/products/dpc-1p-30ms-ac-341x222.jpg"
+                    alt="contractor"
+                    title="contractor"
+                    width="365"
+                    height="365"
                   />
                 </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong>MU2-B4 4POLE CONTACTOR</strong>
-                  </h5>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">20 Items</p>
                 </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/MU2-B3-CONTACTOR.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
-                  >
-                </div>
-              </div>
+              </a>
             </div>
-            <div class="item features-image сol-12 col-md-6 col-lg-3">
-              <div class="item-wrapper">
-                <div class="item-img">
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
                   <img
-                    src="assets/images/products/mu-6-8-10-341x222.jpg"
-                    alt="Mobirise Website Builder"
-                    title=""
-                    data-slide-to="20"
-                    data-bs-slide-to="20"
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/dpc-1p-30ms-ac-341x222 (1).jpg"
+                    src="assets/images/dpc-1p-30ms-ac-341x222 (1).jpg"
+                    alt="Women's"
+                    title="Women's"
+                    width="365"
+                    height="365"
                   />
                 </div>
-                <br />
-                <div class="item-content">
-                  <h5 class="aboutuitem-title">
-                    <strong>MU6 CONTACTOR</strong>
-                  </h5>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">24 Items</p>
                 </div>
-                <div class="mbr-section-btn item-footer mt-2">
-                  <a
-                    href="assets/files/MU6-CONTACTOR.pdf"
-                    class="btn item-btn btn-secondary display-4"
-                    target="_blank"
-                    >Download Catalogue</a
+              </a>
+            </div>
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
+                  <img
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/dpc-single-pole-s-341x222 (1).jpg"
+                    src="assets/images/dpc-single-pole-s-341x222 (1).jpg"
+                    alt="Top"
+                    title="Top"
+                    width="365"
+                    height="365"
+                  />
+                </div>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">13 Items</p>
+                </div>
+              </a>
+            </div>
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
+                  <img
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/dpc-dp-30ms-ac-341x222 (1).jpg"
+                    src="assets/images/dpc-dp-30ms-ac-341x222 (1).jpg"
+                    alt="Bottom"
+                    title="Bottom"
+                    width="365"
+                    height="365"
+                  />
+                </div>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">26 Items</p>
+                </div>
+              </a>
+            </div>
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
+                  <img
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/products/mch2pb-341x222.jpg"
+                    src="assets/images/products/mch2pb-341x222.jpg"
+                    alt="T-Shirts"
+                    title="T-Shirts"
+                    width="365"
+                    height="365"
+                  />
+                </div>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">18 Items</p>
+                </div>
+              </a>
+            </div>
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
+                  <img
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/products/dpc-single-pole-b-341x222.jpg"
+                    src="assets/images/products/dpc-single-pole-b-341x222.jpg"
+                    alt="Shirts"
+                    title="Shirts"
+                    width="365"
+                    height="365"
+                  />
+                </div>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">11 Items</p>
+                </div>
+              </a>
+            </div>
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
+                  <img
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/products/mu-b3-341x222.jpg"
+                    src="assets/images/products/mu-b3-341x222.jpg"
+                    alt="Jeans"
+                    title="Jeans"
+                    width="365"
+                    height="365"
+                  />
+                </div>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">28 Items</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!--End Category Slider-->
+          <!--Category Slider-->
+          <div
+            class="collection-slider-6items gp10 slick-arrow-dots sub-collection section pt-0"
+          >
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
+                  <img
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/products/dpc-1p-30ms-ac-341x222.jpg"
+                    src="assets/images/products/dpc-1p-30ms-ac-341x222.jpg"
+                    alt="contractor"
+                    title="contractor"
+                    width="365"
+                    height="365"
+                  />
+                </div>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">20 Items</p>
+                </div>
+              </a>
+            </div>
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
+                  <img
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/dpc-1p-30ms-ac-341x222 (1).jpg"
+                    src="assets/images/dpc-1p-30ms-ac-341x222 (1).jpg"
+                    alt="Women's"
+                    title="Women's"
+                    width="365"
+                    height="365"
+                  />
+                </div>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">24 Items</p>
+                </div>
+              </a>
+            </div>
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
+                  <img
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/dpc-single-pole-s-341x222 (1).jpg"
+                    src="assets/images/dpc-single-pole-s-341x222 (1).jpg"
+                    alt="Top"
+                    title="Top"
+                    width="365"
+                    height="365"
+                  />
+                </div>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">13 Items</p>
+                </div>
+              </a>
+            </div>
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
+                  <img
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/dpc-dp-30ms-ac-341x222 (1).jpg"
+                    src="assets/images/dpc-dp-30ms-ac-341x222 (1).jpg"
+                    alt="Bottom"
+                    title="Bottom"
+                    width="365"
+                    height="365"
+                  />
+                </div>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">26 Items</p>
+                </div>
+              </a>
+            </div>
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
+                  <img
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/products/mch2pb-341x222.jpg"
+                    src="assets/images/products/mch2pb-341x222.jpg"
+                    alt="T-Shirts"
+                    title="T-Shirts"
+                    width="365"
+                    height="365"
+                  />
+                </div>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">18 Items</p>
+                </div>
+              </a>
+            </div>
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
+                  <img
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/products/dpc-single-pole-b-341x222.jpg"
+                    src="assets/images/products/dpc-single-pole-b-341x222.jpg"
+                    alt="Shirts"
+                    title="Shirts"
+                    width="365"
+                    height="365"
+                  />
+                </div>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">11 Items</p>
+                </div>
+              </a>
+            </div>
+            <div class="category-item zoomscal-hov">
+              <a href="shop-left-sidebar.html" class="category-link clr-none">
+                <div class="zoom-scal zoom-scal-nopb rounded-0">
+                  <img
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/products/mu-b3-341x222.jpg"
+                    src="assets/images/products/mu-b3-341x222.jpg"
+                    alt="Jeans"
+                    title="Jeans"
+                    width="365"
+                    height="365"
+                  />
+                </div>
+                <div class="details text-center">
+                  <h4 class="category-title mb-0">Contractor</h4>
+                  <p class="counts">28 Items</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <!--End Category Slider-->
+
+         
+      <!--Footer-->
+      <div class="footer">
+        <div class="newsletterbg clearfix">
+          <div class="container">
+            <form action="#" method="post" class="footer-newsletter">
+              <div class="row align-items-center">
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6 mb-3 mb-md-0">
+                  <label class="h3 mb-1 clr-none"
+                    >Sign Up Our Newsletter & Get 10% OFF</label
                   >
+                  <p>
+                    Sign up to stay in the loop. Receive updates, access to
+                    exclusive deals, and more.
+                  </p>
+                </div>
+                <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+                  <div class="input-group">
+                    <input
+                      type="email"
+                      class="form-control input-group-field newsletter-input"
+                      name="email"
+                      value=""
+                      placeholder="Enter your email address..."
+                      required
+                    />
+                    <button
+                      type="submit"
+                      class="input-group-btn btn btn-secondary newsletter-submit"
+                      name="commit"
+                    >
+                      Subscribe
+                    </button>
+                  </div>
                 </div>
               </div>
-            </div>
+            </form>
           </div>
         </div>
-      </section>
-      <!-- Product section -->
-      <br /><br />
-
-      <!--Footer-->
-      <div class="footer footer-4">
         <div class="footer-top clearfix">
           <div class="container">
             <div class="row">
               <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                <h4 class="h4 text-uppercase">Quick Shop</h4>
+                <h4 class="h4">Informations</h4>
+                <ul>
+                  <li><a href="my-account.html">My Account</a></li>
+                  <li><a href="aboutus-style1.html">About us</a></li>
+                  <li><a href="login.html">Login</a></li>
+                  <li><a href="privacy-policy.html">Privacy policy</a></li>
+                  <li><a href="#">Terms &amp; condition</a></li>
+                </ul>
+              </div>
+              <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
+                <h4 class="h4">Quick Shop</h4>
                 <ul>
                   <li><a href="#">Bags &amp; Accessories</a></li>
                   <li><a href="#">Tools &amp; Parts</a></li>
@@ -1125,122 +1038,97 @@
                 </ul>
               </div>
               <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                <h4 class="h4 text-uppercase">My Account</h4>
+                <h4 class="h4">Customer Services</h4>
                 <ul>
-                  <li><a href="my-account.html">My Account</a></li>
-                  <li><a href="cart-style1.html">View Cart</a></li>
-                  <li><a href="wishlist-style1.html">My Wishlist</a></li>
-                  <li><a href="my-account.html">Track My Order</a></li>
-                  <li><a href="faqs-page.html">Help</a></li>
-                </ul>
-              </div>
-              <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-links">
-                <h4 class="h4 text-uppercase">Information</h4>
-                <ul>
-                  <li><a href="aboutus.html">About Us</a></li>
-                  <li><a href="#">Order History</a></li>
-                  <li><a href="#">Returns & Exchange</a></li>
-                  <li><a href="#">Custom Services</a></li>
-                  <li><a href="#">Terms & Condition</a></li>
+                  <li><a href="#">Request Personal Data</a></li>
+                  <li><a href="faqs-style1.html">FAQ's</a></li>
+                  <li><a href="contact-style1.html">Contact Us</a></li>
+                  <li><a href="#">Orders and Returns</a></li>
+                  <li><a href="#">Support Center</a></li>
                 </ul>
               </div>
               <div class="col-12 col-sm-12 col-md-3 col-lg-3 footer-contact">
-                <h4 class="h4 text-uppercase">Contact Us</h4>
+                <h4 class="h4">Contact Us</h4>
                 <p class="address d-flex">
-                  <i class="icon anm anm-map-marker-al pt-1"></i> CB - 303 B,
-                  Ring Road, Naraina, New Delhi - 110028
+                  <i class="icon anm anm-map-marker-al pt-1"></i> 55 Gallaxy
+                  Enque, 2568 steet, 23568 NY
                 </p>
                 <p class="phone d-flex align-items-center">
                   <i class="icon anm anm-phone-l"></i>
                   <b class="me-1 d-none">Phone:</b>
-                  <a href="tel:401234567890">+91 9811456067</a>
+                  <a href="tel:401234567890">(+40) 123 456 7890</a>
                 </p>
                 <p class="email d-flex align-items-center">
                   <i class="icon anm anm-envelope-l"></i>
                   <b class="me-1 d-none">Email:</b>
-                  <a href="mailto:info@example.com"
-                    >info@mintpowerelectric.com</a
-                  >
+                  <a href="mailto:info@example.com">info@example.com</a>
                 </p>
-                <!-- <p class="work-hour d-flex mb-0">
-                  <i class="icon anm anm-clock-r pt-1"></i
-                  ><span class="hour-time"
-                    >Working Hours: <br />Mon - Sun / 9:00 AM - 8:00 PM</span
-                  >
-                </p> -->
+                <ul class="list-inline social-icons mt-3">
+                  <li class="list-inline-item">
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Facebook"
+                      ><i class="icon anm anm-facebook-f"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Twitter"
+                      ><i class="icon anm anm-twitter"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Pinterest"
+                      ><i class="icon anm anm-pinterest-p"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Linkedin"
+                      ><i class="icon anm anm-linkedin-in"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Instagram"
+                      ><i class="icon anm anm-instagram"></i
+                    ></a>
+                  </li>
+                  <li class="list-inline-item">
+                    <a
+                      href="#"
+                      data-bs-toggle="tooltip"
+                      data-bs-placement="top"
+                      title="Youtube"
+                      ><i class="icon anm anm-youtube"></i
+                    ></a>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
         <div class="footer-bottom clearfix">
           <div class="container">
-            <div class="row">
-              <ul
-                class="list-inline social-icons d-inline-flex align-items-center justify-content-center justify-content-sm-start col-12 col-sm-6 col-lg-4"
-              >
-                <li class="list-inline-item">
-                  <a
-                    href="#"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Facebook"
-                    ><i class="icon anm anm-facebook-f"></i
-                  ></a>
-                </li>
-                <li class="list-inline-item">
-                  <a
-                    href="#"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Twitter"
-                    ><i class="icon anm anm-twitter"></i
-                  ></a>
-                </li>
-                <li class="list-inline-item">
-                  <a
-                    href="#"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Pinterest"
-                    ><i class="icon anm anm-pinterest-p"></i
-                  ></a>
-                </li>
-                <li class="list-inline-item">
-                  <a
-                    href="#"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Linkedin"
-                    ><i class="icon anm anm-linkedin-in"></i
-                  ></a>
-                </li>
-                <li class="list-inline-item">
-                  <a
-                    href="#"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Instagram"
-                    ><i class="icon anm anm-instagram"></i
-                  ></a>
-                </li>
-                <li class="list-inline-item">
-                  <a
-                    href="#"
-                    data-bs-toggle="tooltip"
-                    data-bs-placement="top"
-                    title="Youtube"
-                    ><i class="icon anm anm-youtube"></i
-                  ></a>
-                </li>
-              </ul>
-              <div
-                class="copytext text-center col-12 col-md-12 col-lg-4 order-2 order-lg-0 mt-3 mt-lg-0"
-              >
-                &copy; 2024 mintpowerelectric. All Rights Reserved.
-              </div>
-              <ul
-                class="payment-icons d-flex-center justify-content-center justify-content-sm-end col-12 col-sm-6 col-lg-4 mt-3 mt-sm-0"
-              >
+            <div
+              class="d-flex-center flex-column justify-content-md-between flex-md-row-reverse"
+            >
+              <ul class="payment-icons d-flex-center mb-2 mb-md-0">
                 <li><i class="icon anm anm-cc-visa"></i></li>
                 <li><i class="icon anm anm-cc-mastercard"></i></li>
                 <li><i class="icon anm anm-cc-amex"></i></li>
@@ -1249,6 +1137,7 @@
                 <li><i class="icon anm anm-cc-stripe"></i></li>
                 <li><i class="icon anm anm-cc-jcb"></i></li>
               </ul>
+              <div class="copytext">&copy; 2024 Hema. All Rights Reserved.</div>
             </div>
           </div>
         </div>
@@ -1256,9 +1145,7 @@
       <!--End Footer-->
 
       <!--Scoll Top-->
-      <div id="site-scroll" class="rounded-circle">
-        <i class="icon anm anm-angle-up-r"></i>
-      </div>
+      <div id="site-scroll"><i class="icon anm anm-arw-up"></i></div>
       <!--End Scoll Top-->
 
       <!--MiniCart Drawer-->
@@ -1275,7 +1162,7 @@
           <div
             class="minicart-header d-flex-center justify-content-between w-100"
           >
-            <h4 class="fs-6 body-font">Your cart (0 Items)</h4>
+            <h4 class="fs-6">Your cart (0 Items)</h4>
             <button
               class="close-cart border-0"
               data-bs-dismiss="offcanvas"
@@ -1290,7 +1177,7 @@
             </button>
           </div>
           <div class="cartEmpty-content mt-4">
-            <i class="icon anm anm-basket-l fs-1 text-muted"></i>
+            <i class="icon anm anm-cart-l fs-1 text-muted"></i>
             <p class="my-3">No Products in the Cart</p>
             <a href="index.html" class="btn btn-primary cart-btn"
               >Continue shopping</a
@@ -1314,16 +1201,16 @@
                 title="Close"
               ></i>
             </button>
-            <h4 class="fs-6 body-font">Your cart (2 Items)</h4>
+            <h4 class="fs-6">Your cart (2 Items)</h4>
           </div>
           <div class="minicart-content">
             <ul class="m-0 clearfix">
               <li class="item d-flex justify-content-center align-items-center">
-                <a class="product-image" href="product-layout1.html">
+                <a class="product-image rounded-0" href="product-layout1.html">
                   <img
-                    class="blur-up lazyload"
-                    data-src="assets/images/istockphoto-1624109411-612x612.jpg"
-                    src="assets/images/istockphoto-1624109411-612x612.jpg"
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/products/cart-product-img1.jpg"
+                    src="assets/images/products/cart-product-img1.jpg"
                     alt="product"
                     title="Product"
                     width="120"
@@ -1332,7 +1219,7 @@
                 </a>
                 <div class="product-details">
                   <a class="product-title" href="product-layout1.html"
-                    >IdeaPad Intel</a
+                    >Women Sandals</a
                   >
                   <div class="variant-cart my-2">Black / XL</div>
                   <div class="priceRow">
@@ -1370,11 +1257,11 @@
                 </div>
               </li>
               <li class="item d-flex justify-content-center align-items-center">
-                <a class="product-image" href="product-layout1.html">
+                <a class="product-image rounded-0" href="product-layout1.html">
                   <img
-                    class="blur-up lazyload"
-                    data-src="assets/images/products/cart-electronic-product-img2.jpg"
-                    src="assets/images/products/cart-electronic-product-img2.jpg"
+                    class="rounded-0 blur-up lazyload"
+                    data-src="assets/images/products/cart-product-img2.jpg"
+                    src="assets/images/products/cart-product-img2.jpg"
                     alt="product"
                     title="Product"
                     width="120"
@@ -1383,7 +1270,7 @@
                 </a>
                 <div class="product-details">
                   <a class="product-title" href="product-layout1.html"
-                    >Extensa Laptop</a
+                    >Sleeve Round T-Shirt</a
                   >
                   <div class="variant-cart my-2">Yellow / M</div>
                   <div class="priceRow">
@@ -1519,19 +1406,18 @@
                 <div class="row g-0 item mb-3">
                   <a class="col-4 product-image" href="product-layout1.html"
                     ><img
-                      class="blur-up lazyload"
-                      data-src="assets/images/istockphoto-1624109411-612x612.jpg"
-                      src="assets/images/istockphoto-1624109411-612x612.jpg"
+                      class="rounded-0 blur-up lazyload"
+                      data-src="assets/images/products/addtocart-modal.jpg"
+                      src="assets/images/products/addtocart-modal.jpg"
                       alt="Product"
                       title="Product"
                       width="625"
-                      height="625"
+                      height="800"
                   /></a>
                   <div class="col-8 product-details">
                     <div class="product-variant ps-3">
-                      <div class="variant-cart mb-1">Electronic</div>
                       <a class="product-title" href="product-layout1.html"
-                        >Digital SLR Camera</a
+                        >Weave Hoodie Sweatshirt</a
                       >
                       <div class="priceRow mt-2 mb-3">
                         <div class="product-price m-0">
@@ -1570,7 +1456,7 @@
                   <ul class="swatches d-flex-justify-center pt-1 clearfix">
                     <li class="swatch large radius available active">
                       <img
-                        src="assets/images/istockphoto-1624109411-612x612.jpg"
+                        src="assets/images/products/swatches/blue-red.jpg"
                         alt="image"
                         width="70"
                         height="70"
@@ -1581,7 +1467,7 @@
                     </li>
                     <li class="swatch large radius available">
                       <img
-                        src="assets/images/istockphoto-1624109411-612x612.jpg"
+                        src="assets/images/products/swatches/blue-red.jpg"
                         alt="image"
                         width="70"
                         height="70"
@@ -1592,7 +1478,7 @@
                     </li>
                     <li class="swatch large radius available">
                       <img
-                        src="assets/images/istockphoto-1624109411-612x612.jpg"
+                        src="assets/images/products/swatches/blue-red.jpg"
                         alt="image"
                         width="70"
                         height="70"
@@ -1682,7 +1568,7 @@
                   <button
                     type="submit"
                     name="add"
-                    class="btn btn-primary product-cart-submit me-2"
+                    class="btn product-cart-submit me-2"
                   >
                     <span>Add to cart</span>
                   </button>
@@ -1745,22 +1631,21 @@
                     <!-- Product Image -->
                     <a class="product-image" href="product-layout1.html"
                       ><img
-                        class="blur-up lazyload"
-                        data-src="assets/images/products/electronic-product1.jpg"
-                        src="assets/images/products/electronic-product1.jpg"
+                        class="rounded-0 blur-up lazyload"
+                        data-src="assets/images/products/addtocart-modal.jpg"
+                        src="assets/images/products/addtocart-modal.jpg"
                         alt="Product"
                         title="Product"
                         width="625"
-                        height="625"
+                        height="808"
                     /></a>
                     <!-- End Product Image -->
                   </div>
                   <div class="col-md-6 mt-3 mt-md-0">
                     <!-- Product Info -->
                     <div class="product-details">
-                      <div class="variant-cart mb-1">Electronic</div>
                       <a class="product-title" href="product-layout1.html"
-                        >Digital SLR Camera</a
+                        >Cuff Beanie Cap</a
                       >
                       <p class="product-clr my-2 text-muted">Black / XL</p>
                     </div>
@@ -1828,68 +1713,68 @@
                         data-bs-slide-number="0"
                       >
                         <img
-                          class="blur-up lazyload"
-                          data-src="assets/images/products/electronic-product1.jpg"
-                          src="assets/images/products/electronic-product1.jpg"
+                          class="rounded-0 blur-up lazyload"
+                          data-src="assets/images/products/product2.jpg"
+                          src="assets/images/products/product2.jpg"
                           alt="product"
                           title="Product"
                           width="625"
-                          height="625"
+                          height="808"
                         />
                       </div>
                       <div class="item carousel-item" data-bs-slide-number="1">
                         <img
-                          class="blur-up lazyload"
-                          data-src="assets/images/products/electronic-product2.jpg"
-                          src="assets/images/products/electronic-product2.jpg"
+                          class="rounded-0 blur-up lazyload"
+                          data-src="assets/images/products/product2-1.jpg"
+                          src="assets/images/products/product2-1.jpg"
                           alt="product"
                           title="Product"
                           width="625"
-                          height="625"
+                          height="808"
                         />
                       </div>
                       <div class="item carousel-item" data-bs-slide-number="2">
                         <img
-                          class="blur-up lazyload"
-                          data-src="assets/images/products/electronic-product3.jpg"
-                          src="assets/images/products/electronic-product3.jpg"
+                          class="rounded-0 blur-up lazyload"
+                          data-src="assets/images/products/product2-2.jpg"
+                          src="assets/images/products/product2-2.jpg"
                           alt="product"
                           title="Product"
                           width="625"
-                          height="625"
+                          height="808"
                         />
                       </div>
                       <div class="item carousel-item" data-bs-slide-number="3">
                         <img
-                          class="blur-up lazyload"
-                          data-src="assets/images/products/electronic-product4.jpg"
-                          src="assets/images/products/electronic-product4.jpg"
+                          class="rounded-0 blur-up lazyload"
+                          data-src="assets/images/products/product2-3.jpg"
+                          src="assets/images/products/product2-3.jpg"
                           alt="product"
                           title="Product"
                           width="625"
-                          height="625"
+                          height="808"
                         />
                       </div>
                       <div class="item carousel-item" data-bs-slide-number="4">
                         <img
-                          class="blur-up lazyload"
-                          data-src="assets/images/products/electronic-product5.jpg"
-                          src="assets/images/products/electronic-product5.jpg"
+                          class="rounded-0 blur-up lazyload"
+                          data-src="assets/images/products/product2-4.jpg"
+                          src="assets/images/products/product2-4.jpg"
                           alt="product"
                           title="Product"
                           width="625"
-                          height="625"
+                          height="808"
                         />
                       </div>
                       <div class="item carousel-item" data-bs-slide-number="5">
                         <img
-                          class="blur-up lazyload"
-                          data-src="assets/images/products/electronic-product6.jpg"
-                          src="assets/images/products/electronic-product6.jpg"
+                          class="rounded-0 blur-up lazyload"
+                          data-src="/assets/images/IMG_4331 (1).jpg"
+                          src="/assets/images/IMG_4331 (1).jpg"
                           alt="product"
                           title="Product"
                           width="625"
-                          height="625"
+                          height="808"
                         />
                       </div>
                     </div>
@@ -1905,13 +1790,13 @@
                           data-bs-target="#quickView"
                         >
                           <img
-                            class="blur-up lazyload"
-                            data-src="assets/images/products/electronic-product1.jpg"
-                            src="assets/images/products/electronic-product1.jpg"
+                            class="rounded-0 blur-up lazyload"
+                            data-src="assets/images/products/product2.jpg"
+                            src="assets/images/products/product2.jpg"
                             alt="product"
                             title="Product"
                             width="625"
-                            height="625"
+                            height="808"
                           />
                         </div>
                         <div
@@ -1921,13 +1806,13 @@
                           data-bs-target="#quickView"
                         >
                           <img
-                            class="blur-up lazyload"
-                            data-src="assets/images/products/electronic-product2.jpg"
-                            src="assets/images/products/electronic-product2.jpg"
+                            class="rounded-0 blur-up lazyload"
+                            data-src="assets/images/products/product2-1.jpg"
+                            src="assets/images/products/product2-1.jpg"
                             alt="product"
                             title="Product"
                             width="625"
-                            height="625"
+                            height="808"
                           />
                         </div>
                         <div
@@ -1937,13 +1822,13 @@
                           data-bs-target="#quickView"
                         >
                           <img
-                            class="blur-up lazyload"
-                            data-src="assets/images/products/electronic-product3.jpg"
-                            src="assets/images/products/electronic-product3.jpg"
+                            class="rounded-0 blur-up lazyload"
+                            data-src="assets/images/products/product2-2.jpg"
+                            src="assets/images/products/product2-2.jpg"
                             alt="product"
                             title="Product"
                             width="625"
-                            height="625"
+                            height="808"
                           />
                         </div>
                         <div
@@ -1953,13 +1838,13 @@
                           data-bs-target="#quickView"
                         >
                           <img
-                            class="blur-up lazyload"
-                            data-src="assets/images/products/electronic-product4.jpg"
-                            src="assets/images/products/electronic-product4.jpg"
+                            class="rounded-0 blur-up lazyload"
+                            data-src="assets/images/products/product2-3.jpg"
+                            src="assets/images/products/product2-3.jpg"
                             alt="product"
                             title="Product"
                             width="625"
-                            height="625"
+                            height="808"
                           />
                         </div>
                         <div
@@ -1969,13 +1854,13 @@
                           data-bs-target="#quickView"
                         >
                           <img
-                            class="blur-up lazyload"
-                            data-src="assets/images/products/electronic-product5.jpg"
-                            src="assets/images/products/electronic-product5.jpg"
+                            class="rounded-0 blur-up lazyload"
+                            data-src="assets/images/products/product2-4.jpg"
+                            src="assets/images/products/product2-4.jpg"
                             alt="product"
                             title="Product"
                             width="625"
-                            height="625"
+                            height="808"
                           />
                         </div>
                         <div
@@ -1985,13 +1870,13 @@
                           data-bs-target="#quickView"
                         >
                           <img
-                            class="blur-up lazyload"
-                            data-src="assets/images/products/electronic-product6.jpg"
-                            src="assets/images/products/electronic-product6.jpg"
+                            class="rounded-0 blur-up lazyload"
+                            data-src="/assets/images/IMG_4331 (1).jpg"
+                            src="/assets/images/IMG_4331 (1).jpg"
                             alt="product"
                             title="Product"
                             width="625"
-                            height="625"
+                            height="808"
                           />
                         </div>
                       </div>
@@ -2023,23 +1908,8 @@
                   </div>
                 </div>
                 <div class="col-12 col-sm-6 col-md-6 col-lg-6">
-                  <div class="product-subtitle">Electronic</div>
                   <div class="product-arrow d-flex justify-content-between">
                     <h2 class="product-title">Product Quick View Popup</h2>
-                    <div class="arrows d-flex">
-                      <a
-                        class="pro-next"
-                        href="product-layout2.html"
-                        title="Previous"
-                        ><i class="icon anm anm-angle-left-l"></i
-                      ></a>
-                      <a
-                        class="pro-prev"
-                        href="product-layout3.html"
-                        title="Next"
-                        ><i class="icon anm anm-angle-right-l"></i
-                      ></a>
-                    </div>
                   </div>
                   <div class="product-review d-flex mt-0 mb-2">
                     <div class="rating">
@@ -2053,12 +1923,7 @@
                   </div>
                   <div class="product-info">
                     <p class="product-vendor">
-                      Vendor:<span class="text"
-                        ><a href="#">Electronic</a></span
-                      >
-                    </p>
-                    <p class="product-type">
-                      Product Type:<span class="text">Camera</span>
+                      Vendor:<span class="text"><a href="#">HVL</a></span>
                     </p>
                     <p class="product-sku">
                       SKU:<span class="text">RF104</span>
@@ -2066,28 +1931,18 @@
                   </div>
                   <div class="pro-stockLbl my-2">
                     <span class="d-flex-center stockLbl instock d-none"
-                      ><i class="icon anm anm-check-cil text-primary"></i
                       ><span> In stock</span></span
                     >
                     <span class="d-flex-center stockLbl preorder d-none"
-                      ><i class="icon anm anm-clock-r text-primary"></i
                       ><span> Pre-order Now</span></span
                     >
                     <span class="d-flex-center stockLbl outstock d-none"
-                      ><i class="icon anm anm-times-cil text-primary"></i>
-                      <span>Sold out</span></span
-                    >
-                    <span class="d-flex-center stockLbl lowstock" data-qty="15"
-                      ><i class="icon anm anm-exclamation-cir text-primary"></i
-                      ><span>
-                        Order now, Only
-                        <span class="items">10</span> left!</span
-                      ></span
+                      ><span>Sold out</span></span
                     >
                   </div>
                   <div class="product-price d-flex-center my-3">
                     <span class="price old-price">$135.00</span
-                    ><span class="price">$99.00</span>
+                    ><span class="price">$129.00</span>
                   </div>
                   <div class="sort-description">
                     The standard chunk of Lorem Ipsum used since the 1500s is
@@ -2112,38 +1967,29 @@
                         <ul
                           class="variants-clr swatches d-flex-center pt-1 clearfix"
                         >
-                          <li class="swatch large radius available active">
-                            <img
-                              src="assets/images/products/swatches/blue-red.jpg"
-                              alt="image"
-                              width="70"
-                              height="70"
+                          <li class="swatch large radius available blue">
+                            <span
+                              class="swatchLbl"
                               data-bs-toggle="tooltip"
                               data-bs-placement="top"
                               title="Blue"
-                            />
+                            ></span>
                           </li>
-                          <li class="swatch large radius available">
-                            <img
-                              src="assets/images/products/swatches/blue-red.jpg"
-                              alt="image"
-                              width="70"
-                              height="70"
+                          <li class="swatch large radius available black">
+                            <span
+                              class="swatchLbl"
                               data-bs-toggle="tooltip"
                               data-bs-placement="top"
                               title="Black"
-                            />
+                            ></span>
                           </li>
-                          <li class="swatch large radius available">
-                            <img
-                              src="assets/images/products/swatches/blue-red.jpg"
-                              alt="image"
-                              width="70"
-                              height="70"
+                          <li class="swatch large radius available pink">
+                            <span
+                              class="swatchLbl"
                               data-bs-toggle="tooltip"
                               data-bs-placement="top"
                               title="Pink"
-                            />
+                            ></span>
                           </li>
                           <li class="swatch large radius available green">
                             <span
@@ -2226,7 +2072,7 @@
                         class="product-action d-flex-wrap w-100 pt-1 mb-3 clearfix"
                       >
                         <div class="quantity">
-                          <div class="qtyField rounded">
+                          <div class="qtyField">
                             <a class="qtyBtn minus" href="#;"
                               ><i
                                 class="icon anm anm-minus-r"
@@ -2251,10 +2097,9 @@
                           <button
                             type="submit"
                             name="add"
-                            class="btn btn-primary product-cart-submit w-100"
+                            class="btn product-cart-submit w-100"
                           >
-                            <i class="icon anm anm-basket-l me-2"></i
-                            ><span>Add to cart</span>
+                            <span>Add to cart</span>
                           </button>
                           <button
                             type="submit"
@@ -2360,152 +2205,11 @@
       </div>
       <!--End Product Quickview Modal-->
 
-      <!--Newsletter Modal-->
-      <div
-        class="newsletter-modal style4 modal fade"
-        id="newsletter_modal"
-        tabindex="-1"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-          <div class="modal-content border-0">
-            <div class="modal-body p-0">
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-              <div class="newsletter-wrap d-flex flex-row align-items-center">
-                <div
-                  class="newsltr-img col-12 col-md-5 d-none d-sm-none d-md-block"
-                >
-                  <img
-                    class="rounded-end-0 blur-up lazyload"
-                    data-src="assets/images/newsletter/newsletter-s10.jpg"
-                    src="assets/images/newsletter/newsletter-s10.jpg"
-                    alt="image"
-                    width="350"
-                    height="466"
-                  />
-                </div>
-                <div
-                  class="newsltr-text col-12 col-md-7 text-center text-md-start"
-                >
-                  <div class="wraptext mw-100 text-center">
-                    <h2 class="title mb-2">Hey Good Looking</h2>
-                    <p class="text mb-3">
-                      Here is your <b>10% DISCOUNT</b> to get something new.
-                    </p>
-                    <form action="#" method="post" class="mcNewsletter mb-3">
-                      <div class="input-group">
-                        <input
-                          type="email"
-                          class="form-control input-group-field newsletter-input"
-                          name="email"
-                          value=""
-                          placeholder="Enter your email address..."
-                          required
-                        />
-                        <button
-                          type="submit"
-                          class="input-group-btn btn btn-secondary newsletter-submit"
-                          name="commit"
-                        >
-                          <i class="anm anm-arw-right"></i>
-                        </button>
-                      </div>
-                    </form>
-                    <ul
-                      class="list-inline social-icons d-inline-flex justify-content-center mb-3 w-100"
-                    >
-                      <li class="list-inline-item">
-                        <a
-                          href="#"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="top"
-                          title="Facebook"
-                          ><i class="icon anm anm-facebook-f"></i
-                        ></a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a
-                          href="#"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="top"
-                          title="Twitter"
-                          ><i class="icon anm anm-twitter"></i
-                        ></a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a
-                          href="#"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="top"
-                          title="Pinterest"
-                          ><i class="icon anm anm-pinterest-p"></i
-                        ></a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a
-                          href="#"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="top"
-                          title="Linkedin"
-                          ><i class="icon anm anm-linkedin-in"></i
-                        ></a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a
-                          href="#"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="top"
-                          title="Instagram"
-                          ><i class="icon anm anm-instagram"></i
-                        ></a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a
-                          href="#"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="top"
-                          title="Youtube"
-                          ><i class="icon anm anm-youtube"></i
-                        ></a>
-                      </li>
-                    </ul>
-                    <div
-                      class="customCheckbox checkboxlink clearfix justify-content-center"
-                    >
-                      <input id="dontshow" name="newsPopup" type="checkbox" />
-                      <label for="dontshow" class="mb-0"
-                        >Don't show this popup again</label
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!--End Newsletter Modal-->
-
       <!-- Including Jquery/Javascript -->
       <!-- Plugins JS -->
       <script src="assets/js/plugins.js"></script>
       <!-- Main JS -->
       <script src="assets/js/main.js"></script>
-
-      <!--Newsletter Modal Cookies-->
-      <!-- <script>
-        $(window).ready(function () {
-          setTimeout(function () {
-            $("#newsletter_modal").modal("show");
-          }, 7000);
-        });
-      </script> -->
-      <!--End Newsletter Modal Cookies-->
     </div>
     <!--End Page Wrapper-->
   </body>
